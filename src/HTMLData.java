@@ -13,19 +13,18 @@ public class HTMLData {
 	    BufferedReader in = new BufferedReader(
 	    new InputStreamReader(oracle.openStream()));
 
-	    String inputLine, total="";
+	    String inputLine;
 	    StringBuffer sb = new StringBuffer();
 	    
 	    while ((inputLine = in.readLine()) != null) {
 	    	sb.append(inputLine);
-	    	total += inputLine;
 	        System.out.println(inputLine);
 	    }
 	        
 	    in.close();
 	    
 	    Pattern pattern1 = Pattern.compile("\\w+@\\w+.\\w+");
-	    Matcher matcher1 = pattern1.matcher(total);
+	    Matcher matcher1 = pattern1.matcher(sb);
 	    
 	    while (matcher1.find())
 	    	System.out.println(matcher1.group(0));
