@@ -22,7 +22,7 @@ public class HTMLData {
 	    }
 	        
 	    in.close();
-	    
+	    //TODO: Fix regexp...
 	    Pattern pattern1 = Pattern.compile("\\w+@\\w+.\\w+");
 	    Matcher matcher1 = pattern1.matcher(sb);
 	    
