@@ -10,8 +10,11 @@ public class HTMLData {
 	 
 	public static void main(String[] args) throws Exception {
 
+		String url1 = "http://www.lan.esalq.usp.br/en/equipe/docentes";
+		String url2 = "http://127.0.0.1:37511/Faculty%20_%20Agri-food%20Industry,%20Food%20and%20Nutrition.html"; 
 		
-	    URL oracle = new URL("http://www.lan.esalq.usp.br/en/equipe/docentes");
+	    URL oracle = new URL(url2);
+	    
 	    BufferedReader in = new BufferedReader(
 	    new InputStreamReader(oracle.openStream()));
 
